@@ -1,16 +1,10 @@
 environments:
   - name: acceptance
-    cluster:
-      provider: ecs-fargate
-  - name: production
     provider: ecs-fargate
 service:
-    production:
-      disabled: true
   port: 80
   pathPatterns:
   - /*
   pipeline:
-    source:
-      provider: GitHub
-      repo: brentley/best-editor-ever
+    production:
+      disabled: true

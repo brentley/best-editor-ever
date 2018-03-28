@@ -51,7 +51,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <p>A Lex Bot listens on the Amazon Connect instance for votes for different editors. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function receives the votes from Lex and updates the totals in a <a href="https://aws.amazon.com/dynamodb">DynamoDB</a> table. Read more on how this is built on the <a href="https://aws.amazon.com/blogs/aws/new-amazon-connect-and-amazon-lex-integration/">AWS Blog</a>. Also, a big thanks to <a href="https://twitter.com/jbnunn">Jeff Nunn</a> for creating <a href="https://medium.com/aws-activate-startup-blog/building-dynamic-dashboards-using-lambda-and-dynamodb-streams-part-1-217e2318ae17">this template</a>.</p>
+        <p>A Lex Bot listens to Twilio text messages voting for different tee shirts. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function receives the votes from Lex and updates the totals in a <a href="https://aws.amazon.com/dynamodb">DynamoDB</a> table. Read more on how this is built on the <a href="https://aws.amazon.com/blogs/aws/new-amazon-connect-and-amazon-lex-integration/">AWS Blog</a>. Also, a big thanks to <a href="https://twitter.com/jbnunn">Jeff Nunn</a> for creating <a href="https://medium.com/aws-activate-startup-blog/building-dynamic-dashboards-using-lambda-and-dynamodb-streams-part-1-217e2318ae17">this template</a>.</p>
         <p>We do store a hash of your phone number to prevent people from voting more than once. We do not store the number itself.</p>
       </div>
     </div>

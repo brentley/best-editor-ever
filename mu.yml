@@ -1,4 +1,14 @@
+environments:
+  - name: acceptance
+    cluster:
+      provider: ecs-fargate
+  - name: production
+    provider: ecs-fargate
 service:
+    acceptance:
+      disabled: false
+    production:
+      disabled: true
   port: 80
   pathPatterns:
   - /*

@@ -5,8 +5,6 @@ environments:
   - name: production
     provider: ecs-fargate
 service:
-    acceptance:
-      disabled: false
     production:
       disabled: true
   port: 80

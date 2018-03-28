@@ -1,0 +1,8 @@
+service:
+  port: 80
+  pathPatterns:
+  - /*
+  pipeline:
+    source:
+      provider: GitHub
+      repo: brentley/best-editor-ever

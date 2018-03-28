@@ -3,6 +3,7 @@ environments:
     provider: ecs-fargate
 service:
   port: 80
+  desiredCount: 12
   pathPatterns:
   - /*
   pipeline:

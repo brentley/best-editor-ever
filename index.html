@@ -68,8 +68,8 @@
   <script>
 AWS.config.region = 'us-east-1'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: 'us-east-1:7099f5c7-69c7-4e42-9bc4-8257662a4d3a',
-g});
+  IdentityPoolId: 'us-east-1:7099f5c7-69c7-4e42-9bc4-8257662a4d3a'
+});
 var dynamodb = new AWS.DynamoDB();
 var columns = [];
 var chart = c3.generate({

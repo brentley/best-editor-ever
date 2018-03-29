@@ -156,6 +156,16 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 });
 var dynamodb = new AWS.DynamoDB();
 var columns = [];
+var votesToImage = {
+  'vm': 'police_album.png',
+  'route53': 'bob_dylan_album.png',
+  'metadata': '2pac_album.png',
+  'community-heroes': 'david_bowie_album.png',
+  'redshift': 'springsteen_album.png',
+  'serverless': 'sex_pistols_album.png'
+}
+var winningVote = "serverless";
+var shirtimage = document.querySelectorAll("#shirtimage")[0];
 var chart = c3.generate({
   bindto: '#chart',
   data: {
@@ -190,6 +200,7 @@ var chart = c3.generate({
   }
 });
 
+
 function getData() {
   dynamodb.scan({TableName: 'tshirt-votes'}, function(err, data) {
     if (err) {
@@ -201,11 +212,15 @@ function getData() {
         return a['name']['S'] < b['name']['S']
       });
       var new_columns = [];
+      var max_int = 0;
       for(var i in data['Items']) {
-        new_columns[i] = [
-          data['Items'][i]['name']['S'],
-          parseInt(data['Items'][i]['votes']['N'])
-        ];
+        var count = parseInt(data['Items'][i]['votes']['N'])
+        var vote = data['Items'][i]['name']['S']
+        if (count > max_int) {
+          max_int = count;
+          winningVote = vote;
+        }
+        new_columns[i] = [vote, count];
       }
       var update = false;
       if (columns.length > 0) {
@@ -222,6 +237,7 @@ function getData() {
         update = true;
       }
       if (update) {
+        shirtimage.src = 'images/'+votesToImage[winningVote];
         chart.load({
           columns: new_columns
         });

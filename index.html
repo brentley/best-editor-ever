@@ -21,12 +21,72 @@
   a {
     color: #FF9900;
   }
+  a:hover {
+  	color: #fff;
+  }
 
   .lead {
-    color:#c6c6c6;
+    color:#fff;
+    clear: both;
   }
   .c3-legend-item text {
     stroke: white;
+  }
+  .logo img {
+	  width: 30%;
+	  max-width: 200px;
+  }
+  html {
+	  padding: 0px;
+  }
+  body {
+	  background: #252c38;
+	  background-image: url('images/background_stars.jpg');
+	  background-size: cover;
+	  background-position: center top;
+	  padding: 20px 0px;
+  }
+  h2 {
+	  font-size: 48px;
+	  font-weight: bold;
+	  margin-top: 0px;
+  }
+  .albumList {
+	  list-style-type: none;
+	  padding: 0px;
+	  max-width: 800px;
+	  margin: 0 auto;
+  }
+  .albumList li {
+	  width: 23%;
+	  margin: 1%;
+	  display: block;
+	  float: left;
+	  
+  }
+  .albumList li img {
+	  width: 100%;
+  }
+  .verner {
+	  position: relative;
+	  margin-bottom: 10px;
+	  max-width: 600px;
+	  margin: 0 auto;
+  }
+  .album {
+	  position: absolute;
+	  width: 32%;
+	  top: 60%;
+	  left: 32%;
+  }
+  .clear {
+	  clear: both;
+  }
+  footer {
+	  font-size: 10px; 
+	  font-style: italic;
+	  color: #ccc;
+	  margin-top: 10px;
   }
   </style>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -36,38 +96,72 @@
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="jumbotron2">
-      <h1>Help us choose a tee shirt for Werner!</h1>
-      <h4 class="center">Text and vote:</h4>
-      <a href="tel:+13862048956"><h2 class="row">+1 (386) 204-8956</h2></a>
-      <p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name.  You can choose from:
-        <ul>
-          <li>VM (Ghost in the Virtual Machine)</li>
-          <li>Route53 (Route53 Revisited))</li>
-          <li>Metadata (All Eyez on Metadata)</li>
-          <li>us-east-1 (us-east-1)</li>
-          <li>Cache (Cache Rules Everything Around Me)</li>
-          <li>Community Heroes (Community Heroes)</li>
-          <li>Serverless (Nevermind the Servers, Here's Serverless)</li>
-          <li>Redshift (Born to Run Redshift)</li>
-        </ul>
-      <p class="lead">This is a simple demonstration of <a href="https://aws.amazon.com/lex/">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a></p>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="chart"></div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <p>A Lex Bot listens to Twilio text messages voting for different tee shirts. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function receives the votes from Lex and updates the totals in a <a href="https://aws.amazon.com/dynamodb">DynamoDB</a> table. Read more on how this is built on the <a href="https://aws.amazon.com/blogs/aws/new-amazon-connect-and-amazon-lex-integration/">AWS Blog</a>. Also, a big thanks to <a href="https://twitter.com/jbnunn">Jeff Nunn</a> for creating <a href="https://medium.com/aws-activate-startup-blog/building-dynamic-dashboards-using-lambda-and-dynamodb-streams-part-1-217e2318ae17">this template</a>.</p>
-        <p>We do store a hash of your phone number to prevent people from voting more than once. We do not store the number itself.</p>
-      </div>
-    </div>
-  </div> <!-- /container -->
-  <footer>Made with ❤️ by <a href="https://twitter.com/jrhunt">@jrhunt</a>. Adapted for this demo by <a href="https://twitter.com/brentcontained">@brentcontained</a>. Code is <a href="https://github.com/brentley/best-editor-ever">here</a>.</footer>
+	<div class="container">
+		<div class="jumbotron2">
+			
+			<div class="logo">
+				<img src="images/logo-aws.png" />
+			</div><!-- /logo -->
+			
+			<h1>Help us choose a tee shirt for Werner!</h1>
+						
+			<h4 class="center">Text and vote:</h4>
+			<a href="tel:+13862048956"><h2 class="row">+1 (386) 204-8956</h2></a>
+		
+			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name.<br />You can choose from:
+						
+			<ul class="albumList">
+				<li><img src="images/album_community-heroes.jpg" /><br />VM (Ghost in the Virtual Machine)</li>
+				<li><img src="images/album_community-heroes.jpg" /><br />Route53 (Route53 Revisited))</li>
+				<li><img src="images/album_community-heroes.jpg" /><br />Metadata (All Eyez on Metadata)</li>
+				<li><img src="images/album_community-heroes.jpg" /><br />us-east-1 (us-east-1)</li>
+				<li class="clear"><img src="images/album_community-heroes.jpg" /><br />Cache (Cache Rules Everything Around Me)</li>
+				<li><img src="images/album_community-heroes.jpg" /><br />Community Heroes (Community Heroes)</li>
+				<li><img src="images/album_community-heroes.jpg" /><br />Serverless (Nevermind the Servers, Here's Serverless)</li>
+				<li><img src="images/album_community-heroes.jpg" /><br />Redshift (Born to Run Redshift)</li>
+			</ul>
+			<p class="lead">
+				This is a simple demonstration of <a href="https://aws.amazon.com/lex/">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a>
+			</p>
+
+			
+					</div><!-- /jumbotron2 -->
+	
+	
+		<div class="row">
+			
+			<div class="col-md-12">	
+								
+				<div id="chart"></div>
+			</div> <!-- /col-md-12 -->
+			
+			<div class="col-md-12">
+					
+				<div class="verner">
+					<img src="images/album_community-heroes.jpg" class="album" />
+					<img src="images/verner-blank-shirt-outline.png" style="width: 100%;" />
+		
+				</div> <!-- /verner -->
+			</div>
+		
+		</div> <!-- /row -->
+		
+		
+		<div class="row">
+			
+			<div class="col-md-12">
+
+				<p>We do store a hash of your phone number to prevent people from voting more than once. We do not store the number itself.</p>
+				<p>A Lex Bot listens to Twilio text messages voting for different tee shirts. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function receives the votes from Lex and updates the totals in a <a href="https://aws.amazon.com/dynamodb">DynamoDB</a> table. Read more on how this is built on the <a href="https://aws.amazon.com/blogs/aws/new-amazon-connect-and-amazon-lex-integration/">AWS Blog</a>. Also, a big thanks to <a href="https://twitter.com/jbnunn">Jeff Nunn</a> for creating <a href="https://medium.com/aws-activate-startup-blog/building-dynamic-dashboards-using-lambda-and-dynamodb-streams-part-1-217e2318ae17">this template</a>.</p>	
+			</div> <!-- /col-md-12 -->
+		</div> <!-- /row -->
+	</div> <!-- /container -->
+
+	<footer>
+		Made with ❤️ by <a href="https://twitter.com/jrhunt">@jrhunt</a>. Adapted for this demo by <a href="https://twitter.com/brentcontained">@brentcontained</a>. Code is <a href="https://github.com/brentley/best-editor-ever">here</a>.
+	</footer>
+  
   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.92.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.15/c3.min.js"></script>

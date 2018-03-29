@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- original template from here: http://voteapp.s3-website-us-east-1.amazonaws.com/ -->
+<!-- This is the hacky-est javascript in the world and Randall knows this. Please don't judge him because he wrote it in 5 minutes when some folks decided they wanted to vote on some tshirts. Hey, I guess cognito is pretty easy to use though eh :D! -->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,8 +57,9 @@
 	  padding: 0px;
 	  max-width: 800px;
 	  margin: 0 auto;
+    text-align: center;
   }
-    .albumList li img {
+  .albumList li img {
 	  width: 100%;
   }
   .werner {
@@ -102,8 +104,11 @@
 
 			<h4 class="center">Text and vote:</h4>
 			<a href="tel:+13862048956"><h2 class="row">+1 (386) 204-8956</h2></a>
-
+      <p class="lead">
+        This is a simple demonstration of <a href="https://aws.amazon.com/lex/">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a>
+      </p>
 			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name.<br />You can choose from:
+
 
 			<ul class="albumList">
 				<li><img src="images/police_album.png" /><br /><b>1. VM </b> <br /> "Ghost in the Virtual Machine"</li>
@@ -120,7 +125,6 @@
 
 					</div><!-- /jumbotron2 -->
 
-
 		<div class="row" style="border-bottom: 1px dotted #ccc; margin-bottom: 20px;">
 
 			<div class="col-md-6">
@@ -131,7 +135,7 @@
 			<div class="col-md-6">
 
 				<div class="werner">
-					<img src="images/album_community-heroes.jpg" class="album" />
+					<img id="shirtimage" src="" class="album" />
 					<img src="images/werner-blank-shirt-outline.png" style="width: 100%;" />
 
 				</div> <!-- /verner -->

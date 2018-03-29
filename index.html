@@ -118,7 +118,7 @@ var chart = c3.generate({
 });
 
 function getData() {
-  dynamodb.scan({TableName: 'editor-votes'}, function(err, data) {
+  dynamodb.scan({TableName: 'tshirt-votes'}, function(err, data) {
     if (err) {
       console.log(err);
       return null;

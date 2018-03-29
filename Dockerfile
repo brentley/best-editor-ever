@@ -5,4 +5,4 @@ ADD images /usr/share/nginx/html/images
 ADD healthcheck/default.conf /etc/nginx/conf.d/
 
 HEALTHCHECK --interval=10s --timeout=3s \
-  CMD wget http://localhost/health/ || exit 1
+  CMD wget -qO- http://localhost/health || exit 1

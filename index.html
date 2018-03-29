@@ -106,14 +106,12 @@
 			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name.<br />You can choose from:
 
 			<ul class="albumList">
-				<li><img src="images/police_album.png" /><br />VM (Ghost in the Virtual Machine)</li>
-				<li><img src="images/bob_dylan_album.png" /><br />Route53 (Route53 Revisited))</li>
-				<li><img src="images/2pac_album.png" /><br />Metadata (All Eyez on Metadata)</li>
-				<li><img src="images/black_sabbath_album.png" /><br />us-east-1 (us-east-1)</li>
-				<li class="clear"><img src="images/wutang_album.png" /><br />Cache (Cache Rules Everything Around Me)</li>
-				<li><img src="images/david_bowie_album.png" /><br />Community Heroes (Community Heroes)</li>
-				<li><img src="images/sex_pistols_album.png" /><br />Serverless (Nevermind the Servers, Here's Serverless)</li>
-				<li><img src="images/springsteen_album.png" /><br />Redshift (Born to Run Redshift)</li>
+				<li><img src="images/police_album.png" /><br /><b>1. VM </b> <br /> "Ghost in the Virtual Machine"</li>
+				<li><img src="images/bob_dylan_album.png" /><br /><b>2. Route53 </b><br /> "Route53 Revisited"</li>
+				<li><img src="images/2pac_album.png" /><br /><b>3. Metadata</b><br /> "All Eyez on Metadata"</li>
+				<li><img src="images/david_bowie_album.png" /><br /><b>4. Community Heroes </b><br /> "Community Heroes"</li>
+				<li><img src="images/sex_pistols_album.png" /><br /><b>5. Serverless<br /> "Nevermind the Servers, Here's Serverless"</li>
+				<li><img src="images/springsteen_album.png" /><br /><b>6. Redshift</b><br /> "Born to Run Redshift"</li>
 			</ul>
 			<p class="lead">
 				This is a simple demonstration of <a href="https://aws.amazon.com/lex/">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a>
@@ -138,19 +136,6 @@
 
 				</div> <!-- /verner -->
 			</div>
-
-		</div> <!-- /row -->
-
-
-		<div class="row" >
-
-			<div class="col-md-12">
-
-				<p>We do store a hash of your phone number to prevent people from voting more than once. We do not store the number itself.</p>
-				<p>A Lex Bot listens to Twilio text messages voting for different tee shirts. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function receives the votes from Lex and updates the totals in a <a href="https://aws.amazon.com/dynamodb">DynamoDB</a> table. Read more on how this is built on the <a href="https://aws.amazon.com/blogs/aws/new-amazon-connect-and-amazon-lex-integration/">AWS Blog</a>. Also, a big thanks to <a href="https://twitter.com/jbnunn">Jeff Nunn</a> for creating <a href="https://medium.com/aws-activate-startup-blog/building-dynamic-dashboards-using-lambda-and-dynamodb-streams-part-1-217e2318ae17">this template</a>.</p>
-			</div> <!-- /col-md-12 -->
-		</div> <!-- /row -->
-	</div> <!-- /container -->
 
 	<footer>
 		Made with ❤️ by <a href="https://twitter.com/jrhunt">@jrhunt</a>. Adapted for this demo by <a href="https://twitter.com/brentcontained">@brentcontained</a>. Code is <a href="https://github.com/brentley/best-editor-ever">here</a>.

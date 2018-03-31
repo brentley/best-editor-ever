@@ -1,6 +1,8 @@
 environments:
   - name: acceptance
     provider: ecs-fargate
+    loadbalancer:
+      certificate: cf29c720-015c-4a99-a3ed-2ab663f9c274
 service:
   port: 80
   desiredCount: 12

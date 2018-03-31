@@ -61,25 +61,51 @@ body {
 #chart {
 	margin-top: 20px;
 }
+
+  .werner {
+	  position: relative;
+	  margin-bottom: 10px;
+	  max-width: 600px;
+	  margin: 0 auto;
+	  margin-top: 15px;
+	  clear: both;
+  }
+  
+  .col-md-6 {
+		clear: both;
+	} 
+  
 @media (min-width: 768px) {
 	.albumList li {
 		  width: 23%;
 		  margin: 1%;
 		  display: block;
-		  float: left;
-		  
+		  float: left;		  
 	  }
-	  
+	
 	#chart {
 		margin-top: 30px !important;
 	}
 }
 
 @media (min-width: 992px) {
+	.albumList li {
+		width: 14.66666667%;
+		margin: 1%;
+	}
+	
+	.col-md-6 {
+		clear: none;
+	} 
+	
 	#chart {
-		margin-top: 30px !important;
+		margin-top: 50px !important;
 	}
 }
+
+
+
+
 
 /* Main marketing message and sign up button */
 .jumbotron {

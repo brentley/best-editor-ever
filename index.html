@@ -35,7 +35,7 @@
   }
   .logo img {
 	  width: 30%;
-	  max-width: 150px;
+	  max-width: 100px;
   }
   html {
 	  padding: 0px;
@@ -52,23 +52,31 @@
 	  font-weight: bold;
 	  margin-top: 0px;
   }
+  h2 em {
+	  font-size: 30px; 
+	  color: #fff;
+	  font-style: normal;	  
+  }
   .albumList {
 	  list-style-type: none;
 	  padding: 0px;
-	  max-width: 800px;
-	  margin: 0 auto;
+	  margin: 0 10;
     text-align: center;
+  }
+  .albumList li b {
+	  color: #FF9900;
   }
   .albumList li img {
 	  width: 100%;
+	  margin-bottom: 5px;
   }
-  .werner {
-	  position: relative;
-	  margin-bottom: 10px;
-	  max-width: 600px;
-	  margin: 0 auto;
-	  margin-top: 15px;
+  
+  .albumList {
+	  display: flex;
+	  flex-flow: row wrap;
+	  justify-content: center;
   }
+
   .album {
 	  position: absolute;
 	  width: 32%;
@@ -102,13 +110,13 @@
 
 			<h1>Help us choose a T-shirt for Werner!</h1>
 
-			<h4 class="center">Text and vote:</h4>
-			<a href="tel:+13862048956"><h2 class="row">+1 (386) 204-8956</h2></a>
-      <p class="lead">
-        This is a simple demonstration of <a href="https://aws.amazon.com/lex/">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a>
-      </p>
-			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name.<br />You can choose from:
-
+			<h2 class="row"><em>Text and vote: </em><a href="tel:+13862048956">+1 (386) 204-8956</a></h2>
+      
+			<p class="lead">
+			This is a simple demonstration of <a href="https://aws.amazon.com/lex/">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a>
+			</p>
+			
+			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name. You can choose from:
 
 			<ul class="albumList">
 				<li><img src="images/police_album.png" /><br /><b>1. VM </b> <br /> "Ghost in the Virtual Machine"</li>
@@ -119,19 +127,14 @@
 				<li><img src="images/springsteen_album.png" /><br /><b>6. Redshift</b><br /> "Born to Run Redshift"</li>
 			</ul>
 			
-			<p class="lead">
-				This is a simple demonstration of <a href="https://aws.amazon.com/lex/">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/">AWS Fargate</a>
-			</p>
-
-
-					</div><!-- /jumbotron2 -->
+		</div><!-- /jumbotron2 -->
 
 		<div class="row" style="border-bottom: 1px dotted #ccc; margin-bottom: 20px;">
 
 			<div class="col-md-6">
 
 				<div id="chart"></div>
-			</div> <!-- /col-md-12 -->
+			</div> <!-- /col-md-6 -->
 
 			<div class="col-md-6">
 
@@ -139,11 +142,13 @@
 					<img id="shirtimage" src="" class="album" />
 					<img src="images/werner-blank-shirt-outline.png" style="width: 100%;" />
 
-				</div> <!-- /verner -->
+				</div> <!-- /werner -->
+				
 			</div>
+		</div>
 
 	<footer>
-    <br />
+    
 		Made with ❤️ by <a href="https://twitter.com/jrhunt">@jrhunt</a>. Adapted for this demo by <a href="https://twitter.com/abbyfuller">@abbyfuller</a> and <a href="https://twitter.com/brentcontained">@brentcontained</a>. Code is <a href="https://github.com/brentley/best-editor-ever">here</a>.
 	</footer>
 

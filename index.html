@@ -53,9 +53,9 @@
 	  margin-top: 0px;
   }
   h2 em {
-	  font-size: 30px; 
+	  font-size: 30px;
 	  color: #fff;
-	  font-style: normal;	  
+	  font-style: normal;
   }
   .albumList {
 	  list-style-type: none;
@@ -73,12 +73,17 @@
   .albumList li img {
 	  width: 100%;
 	  margin-bottom: 5px;
+    font-size: 48px;
+	  font-weight: bold;
+	  margin-top: 0px;
   }
-  
+
   .albumList {
 	  display: flex;
 	  flex-flow: row wrap;
 	  justify-content: center;
+    font-size: 48px;
+
   }
 
   .album {
@@ -115,22 +120,22 @@
 			<h1>Help us choose a T-shirt for Werner!</h1>
 
 			<h2 class="row"><em>Text and vote: </em><a href="sms:+13862048956">+1 (386) 204-8956</a></h2>
-      
+
 			<p class="lead">
 			This is a simple demonstration of <a href="https://aws.amazon.com/lex/" target="_blank">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/" target="_blank">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/" target="_blank">AWS Fargate</a>
 			</p>
-			
-			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name. You can choose from:
+
+			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt number. You can choose from:
 
 			<ul class="albumList">
-				<li><a href="sms:+13862048956;?&body=VM"><img src="images/police_album.png" /></a><br /><a href="sms:+13862048956;?&body=VM"><b>1. VM </b></a> <br /> "Ghost in the Virtual Machine"</li>
-				<li><a href="sms:+13862048956;?&body=Route63"><img src="images/bob_dylan_album.png" /></a><br /><a href="sms:+13862048956;?&body=Route63"><b>2. Route53 </b></a><br /> "Route53 Revisited"</li>
-				<li><a href="sms:+13862048956;?&body=Metadata"><img src="images/2pac_album.png" /></a><br /><a href="sms:+13862048956;?&body=Metadata"><b>3. Metadata</b></a><br /> "All Eyez on Metadata"</li>
-				<li><a href="sms:+13862048956;?&body=Community%20Heroes"><img src="images/david_bowie_album.png" /></a><br /><a href="sms:+13862048956;?&body=Community%20Heroes"><b>4. Community Heroes </b></a><br /> "Community Heroes"</li>
-				<li><a href="sms:+13862048956;?&body=Serverless"><img src="images/sex_pistols_album.png" /></a><br /><a href="sms:+13862048956;?&body=Serverless"><b>5. Serverless</b></a><br /> "Nevermind the Servers, Here's Serverless"</li>
-				<li><a href="sms:+13862048956;?&body=Redshift"><img src="images/springsteen_album.png" /></a><br /><a href="sms:+13862048956;?&body=Redshift"><b>6. Redshift</b></a><br />"Born to Run Redshift"</li>
+				<li><a href="sms:+13862048956;?&body=1"><<img src="images/red.jpg" /><br /><b> 1 </b></li>
+				<li><a href="sms:+13862048956;?&body=2"><<img src="images/blue.jpg" /><br /><b> 2 </b></li>
+				<li><a href="sms:+13862048956;?&body=3"><<img src="images/black.jpg" /><br /><b> 3 </b></li>
+				<li><a href="sms:+13862048956;?&body=4"><<img src="images/green.jpg" /><br /><b> 4 </b></li>
+				<li><a href="sms:+13862048956;?&body=5"><<img src="images/purple.jpg" /><br /><b> 5 </b></li>
+				<li><a href="sms:+13862048956;?&body=6"><<img src="images/grey.jpg" /><br /><b> 6 </b></li>
 			</ul>
-			
+
 		</div><!-- /jumbotron2 -->
 
 		<div class="row" style="border-bottom: 1px dotted #ccc; margin-bottom: 20px;">
@@ -147,12 +152,12 @@
 					<img src="images/werner-blank-shirt-outline.png" style="width: 100%;" />
 
 				</div> <!-- /werner -->
-				
+
 			</div>
 		</div>
 
 	<footer>
-    
+
 		Made with ❤️ by <a href="https://twitter.com/jrhunt" target="_blank">@jrhunt</a>. Adapted for this demo by <a href="https://twitter.com/abbyfuller">@abbyfuller</a> and <a href="https://twitter.com/brentcontained" target="_blank">@brentcontained</a>. Code is <a href="https://github.com/brentley/best-editor-ever" target="_blank">here</a>.
 	</footer>
 
@@ -167,15 +172,15 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 var dynamodb = new AWS.DynamoDB();
 var columns = [];
 var votesToImage = {
-  'vm': 'police_album.png',
-  'route53': 'bob_dylan_album.png',
-  'metadata': '2pac_album.png',
-  'community-heroes': 'david_bowie_album.png',
-  'redshift': 'springsteen_album.png',
-  'serverless': 'sex_pistols_album.png'
+  'fargate': 'red.jpg',
+  'serverless': 'blue.jpg',
+  'machine': 'black.jpg',
+  'lambda': 'green.jpg',
+  'heavy-lifting': 'purple.jpg',
+  'datacenteres': 'grey.jpg'
 }
-var winningVote = "serverless";
-var shirtimage = document.querySelectorAll("#shirtimage")[0];
+/*var winningVote = "machine";
+var shirtimage = document.querySelectorAll("#shirtimage")[0];*/
 var chart = c3.generate({
   bindto: '#chart',
   data: {

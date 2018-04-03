@@ -69,6 +69,9 @@
   .albumList li img {
 	  width: 100%;
 	  margin-bottom: 5px;
+    font-size: 48px;
+	  font-weight: bold;
+	  margin-top: 0px;
   }
 
   .albumList {
@@ -116,15 +119,15 @@
 			This is a simple demonstration of <a href="https://aws.amazon.com/lex/" target="_blank">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/" target="_blank">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/" target="_blank">AWS Fargate</a>
 			</p>
 
-			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name. You can choose from:
+			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt number. You can choose from:
 
 			<ul class="albumList">
-				<li><img src="images/red.jpg" /><br /><b>1. fargate </b> <br /> "Unicorns and Enterprises run on Fargate"</li>
-				<li><img src="images/blue.jpg" /><br /><b>2. serverless </b><br /> "Never mind the servers...here's serverless!"</li>
-				<li><img src="images/black.jpg" /><br /><b>3. machine</b><br /> "Werner Against the Machine"</li>
-				<li><img src="images/green.jpg" /><br /><b>4. lambda </b><br /> "Powered by AWS Lambda"</li>
-				<li><img src="images/purple.jpg" /><br /><b>5. heavy-lifting</b><br /> "Werner vs Undifferentiated Heavy-Lifting"</li>
-				<li><img src="images/grey.jpg" /><br /><b>6. datacenters</b><br /> "Friends don't let friends build datacenters"</li>
+				<li><img src="images/red.jpg" /><br /><b> 1 </b></li>
+				<li><img src="images/blue.jpg" /><br /><b> 2 </b></li>
+				<li><img src="images/black.jpg" /><br /><b> 3 </b></li>
+				<li><img src="images/green.jpg" /><br /><b> 4 </b></li>
+				<li><img src="images/purple.jpg" /><br /><b> 5 </b></li>
+				<li><img src="images/grey.jpg" /><br /><b> 6 </b></li>
 			</ul>
 
 		</div><!-- /jumbotron2 -->
@@ -170,7 +173,7 @@ var votesToImage = {
   'heavy-lifting': 'purple.jpg',
   'datacenteres': 'grey.jpg'
 }
-var winningVote = "serverless";
+var winningVote = "machine";
 var shirtimage = document.querySelectorAll("#shirtimage")[0];
 var chart = c3.generate({
   bindto: '#chart',

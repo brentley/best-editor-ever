@@ -53,9 +53,9 @@
 	  margin-top: 0px;
   }
   h2 em {
-	  font-size: 30px; 
+	  font-size: 30px;
 	  color: #fff;
-	  font-style: normal;	  
+	  font-style: normal;
   }
   .albumList {
 	  list-style-type: none;
@@ -70,7 +70,7 @@
 	  width: 100%;
 	  margin-bottom: 5px;
   }
-  
+
   .albumList {
 	  display: flex;
 	  flex-flow: row wrap;
@@ -111,22 +111,22 @@
 			<h1>Help us choose a T-shirt for Werner!</h1>
 
 			<h2 class="row"><em>Text and vote: </em><a href="sms:+13862048956">+1 (386) 204-8956</a></h2>
-      
+
 			<p class="lead">
 			This is a simple demonstration of <a href="https://aws.amazon.com/lex/" target="_blank">Amazon Lex</a> and <a href="https://aws.amazon.com/lambda/" target="_blank">AWS Lambda</a> and <a href="https://aws.amazon.com/fargate/" target="_blank">AWS Fargate</a>
 			</p>
-			
+
 			<p class="lead"> Choose your favorite shirt, and vote by texting us the shirt name. You can choose from:
 
 			<ul class="albumList">
-				<li><img src="images/police_album.png" /><br /><b>1. VM </b> <br /> "Ghost in the Virtual Machine"</li>
-				<li><img src="images/bob_dylan_album.png" /><br /><b>2. Route53 </b><br /> "Route53 Revisited"</li>
-				<li><img src="images/2pac_album.png" /><br /><b>3. Metadata</b><br /> "All Eyez on Metadata"</li>
-				<li><img src="images/david_bowie_album.png" /><br /><b>4. Community Heroes </b><br /> "Community Heroes"</li>
-				<li><img src="images/sex_pistols_album.png" /><br /><b>5. Serverless</b><br /> "Nevermind the Servers, Here's Serverless"</li>
-				<li><img src="images/springsteen_album.png" /><br /><b>6. Redshift</b><br /> "Born to Run Redshift"</li>
+				<li><img src="images/red.jpg" /><br /><b>1. fargate </b> <br /> "Unicorns and Enterprises run on Fargate"</li>
+				<li><img src="images/blue.jpg" /><br /><b>2. serverless </b><br /> "Never mind the servers...here's serverless!"</li>
+				<li><img src="images/black.jpg" /><br /><b>3. machine</b><br /> "Werner Against the Machine"</li>
+				<li><img src="images/green.jpg" /><br /><b>4. lambda </b><br /> "Powered by AWS Lambda"</li>
+				<li><img src="images/purple.jpg" /><br /><b>5. heavy-lifting</b><br /> "Werner vs Undifferentiated Heavy-Lifting"</li>
+				<li><img src="images/grey.jpg" /><br /><b>6. datacenters</b><br /> "Friends don't let friends build datacenters"</li>
 			</ul>
-			
+
 		</div><!-- /jumbotron2 -->
 
 		<div class="row" style="border-bottom: 1px dotted #ccc; margin-bottom: 20px;">
@@ -143,12 +143,12 @@
 					<img src="images/werner-blank-shirt-outline.png" style="width: 100%;" />
 
 				</div> <!-- /werner -->
-				
+
 			</div>
 		</div>
 
 	<footer>
-    
+
 		Made with ❤️ by <a href="https://twitter.com/jrhunt" target="_blank">@jrhunt</a>. Adapted for this demo by <a href="https://twitter.com/abbyfuller">@abbyfuller</a> and <a href="https://twitter.com/brentcontained" target="_blank">@brentcontained</a>. Code is <a href="https://github.com/brentley/best-editor-ever" target="_blank">here</a>.
 	</footer>
 
@@ -163,12 +163,12 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 var dynamodb = new AWS.DynamoDB();
 var columns = [];
 var votesToImage = {
-  'vm': 'police_album.png',
-  'route53': 'bob_dylan_album.png',
-  'metadata': '2pac_album.png',
-  'community-heroes': 'david_bowie_album.png',
-  'redshift': 'springsteen_album.png',
-  'serverless': 'sex_pistols_album.png'
+  'fargate': 'red.jpg',
+  'serverless': 'blue.jpg',
+  'machine': 'black.jpg',
+  'lambda': 'green.jpg',
+  'heavy-lifting': 'purple.jpg',
+  'datacenteres': 'grey.jpg'
 }
 var winningVote = "serverless";
 var shirtimage = document.querySelectorAll("#shirtimage")[0];

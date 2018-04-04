@@ -77,8 +77,8 @@ body {
   
 @media (min-width: 768px) {
 	.albumList li {
-		  width: 23%;
-		  margin: 1%;
+		  width: 31%;
+		  margin: 1.1666666667%;
 		  display: block;
 		  float: left;		  
 	  }
